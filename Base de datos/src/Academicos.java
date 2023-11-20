@@ -4,9 +4,9 @@ public class Academicos extends Persona{
     String lineas_de_investigacion;
     int antiguedad;
 
-    public Academicos(int rut, String nombreCompleto, String facultad, boolean si_es_Alumno, boolean si_es_Profesor,
-            String departamento, String lineas_de_investigacion, int antiguedad) {
-        super(rut, nombreCompleto, facultad, si_es_Alumno, si_es_Profesor);
+    public Academicos(int rut, String nombreCompleto, String facultad, int telefono, String correo_electronico,
+    String direccion, String departamento, String lineas_de_investigacion, int antiguedad) {
+        super(rut, nombreCompleto, facultad, telefono, correo_electronico, direccion);
         this.departamento = departamento;
         this.lineas_de_investigacion = lineas_de_investigacion;
         this.antiguedad = antiguedad;
@@ -36,6 +36,12 @@ public class Academicos extends Persona{
         this.antiguedad = antiguedad;
     }
 
-    
+
+    public String mostrarDatos() {
+        return "Rut: " + getRut() +
+               "\nDepartamento: " + getDepartamento() +
+               "\nLíneas de Investigación: " + getLineas_de_investigacion() +
+               "\nAntigüedad: " + getAntiguedad();
+    }
 
 }

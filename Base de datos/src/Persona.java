@@ -3,17 +3,20 @@ public class Persona {
     int rut;
     String nombreCompleto;
     String facultad;
-    boolean si_es_Alumno;
-    boolean si_es_Profesor;
+    int telefono;
+    String correo_electronico;
+    String direccion;
 
-
-    public Persona(int rut, String nombreCompleto, String facultad, boolean si_es_Alumno, boolean si_es_Profesor) {
+    public Persona(int rut, String nombreCompleto, String facultad, int telefono, String correo_electronico,
+            String direccion) {
         this.rut = rut;
         this.nombreCompleto = nombreCompleto;
         this.facultad = facultad;
-        this.si_es_Alumno = si_es_Alumno;
-        this.si_es_Profesor = si_es_Profesor;
+        this.telefono = telefono;
+        this.correo_electronico = correo_electronico;
+        this.direccion = direccion;
     }
+
 
     public int getRut() {
         return rut;
@@ -34,27 +37,43 @@ public class Persona {
     public String getFacultad() {
         return facultad;
     }
-    
+
     public void setFacultad(String facultad) {
         this.facultad = facultad;
     }
 
-    public boolean isSi_es_Alumno() {
-        return si_es_Alumno;
+    public int getTelefono() {
+        return telefono;
     }
 
-    public void setSi_es_Alumno(boolean si_es_Alumno) {
-        this.si_es_Alumno = si_es_Alumno;
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
     }
 
-    public boolean isSi_es_Profesor() {
-        return si_es_Profesor;
-    }
-    
-    public void setSi_es_Profesor(boolean si_es_Profesor) {
-        this.si_es_Profesor = si_es_Profesor;
+    public String getCorreo_electronico() {
+        return correo_electronico;
     }
 
+    public void setCorreo_electronico(String correo_electronico) {
+        this.correo_electronico = correo_electronico;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String mostrarDatos() {
+        return "Nombre: " + nombreCompleto +
+                "\nRut: " + rut +
+                "\nFacultad: " + facultad +
+                "\nTeléfono: " + telefono +
+                "\nCorreo Electrónico: " + correo_electronico +
+                "\nDirección: " + direccion + "\n";
+    }
     
 
 }

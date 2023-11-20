@@ -18,7 +18,7 @@ public class StringTokenizerExample {
 
             String token = tokenizer.nextToken();
             System.out.println("Token: "+ token);
-
+            
         }
 
 

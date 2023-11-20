@@ -6,9 +6,9 @@ public class Estudiantes extends Persona {
     float promedio_acumulado;
 
 
-    public Estudiantes(int rut, String nombreCompleto, String facultad, boolean si_es_Alumno, boolean si_es_Profesor,
-            String carrera, int anio_ingreso, int semestre, float promedio_acumulado) {
-        super(rut, nombreCompleto, facultad, si_es_Alumno, si_es_Profesor);
+    public Estudiantes(int rut, String nombreCompleto, String facultad, int telefono, String correo_electronico,
+    String direccion, String carrera, int anio_ingreso, int semestre, float promedio_acumulado) {
+        super(rut, nombreCompleto, facultad, telefono, correo_electronico, direccion);
         this.carrera = carrera;
         this.anio_ingreso = anio_ingreso;
         this.semestre = semestre;
@@ -45,6 +45,14 @@ public class Estudiantes extends Persona {
     
     public void setPromedio_acumulado(float promedio_acumulado) {
         this.promedio_acumulado = promedio_acumulado;
+    }
+
+    public String mostrarDatos() {
+        return "Rut: " + getRut() +
+               "\nCarrera: " + getCarrera() +
+               "\nAño Ingreso: " + getAnio_ingreso() +
+               "\nSemestre: " + getSemestre() +
+               "\nPromedio Acumulado: " + getPromedio_acumulado();
     }
 
 }
